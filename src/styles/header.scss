@@ -1,0 +1,46 @@
+.Header-Container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    height: 95px;
+    top: 0px;
+    background: #272727;
+    padding: 25px;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+}
+
+.Logo-Header {
+    height: 50px;
+}
+
+.Button-Header {
+    width: 170px;
+    height: 40px;
+    background: #EAF300;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #272727;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 630px)
+{
+    .Logo-Header {
+        height: 38px;
+    }
+    .Button-Header {
+        width: 165px;
+        height: 38px;
+        border-radius: 14px;
+        font-size: 15px;
+    }
+}

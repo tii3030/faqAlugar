@@ -1,0 +1,140 @@
+.Menu {
+    width: fit-content;
+    min-width: 350px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Title {
+    margin-left: 20px;
+}
+
+.About-More {
+    height: 70px;
+    border: 2px solid #1E1E1E;
+    border-radius: 56px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1E1E1E;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.IconContainer {
+    margin-left: 12px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.Drawer-Header {
+    margin-bottom: 30px;
+    padding-right: 30px;
+}
+
+.Drawer-Container {
+    height: 100%;
+    border-right: 1px solid #8e8e8e;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.Drawer-Container ul {
+    list-style: none;
+}
+
+.Drawer-Container li > a {
+    text-decoration: none;
+}
+
+.Drawer-Container li {
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.Item {
+    font-weight: 500;
+    font-size: 20px;
+    color: #272727;
+}
+
+.Active {
+    box-sizing: border-box;
+    background: #EAF300;
+    border-radius: 17px;
+    padding: 20px !important;
+}
+
+.Active span {
+    color: #272727;
+    font-weight: 700;
+}
+
+.Open {
+    height: 100%;
+    overflow: hidden;
+    -webkit-animation: slideDown .25s;
+    animation: slideDown .25s;
+}
+
+.Close {
+    height: 0;
+    overflow: hidden;
+    -webkit-animation: slideUp .25s;
+    animation: slideUp .25s;
+}
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      height: 0;
+    }
+    to {
+      transform: translateY(0);
+      height: 100%;
+    }
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(0);
+      height: 100%;
+    }
+    to {
+      transform: translateY(-100%);
+      height: 0;
+    }
+}
+
+
+@media (max-width: 992px)
+{
+    .Menu {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        border-bottom: 2px solid #272727;
+    }
+    .About-More {
+        border: none;
+        border-radius: 0;
+        justify-content: space-between;
+    }
+    .Drawer-Header {
+        padding-right: 0;
+        margin-bottom: 0;
+        border-top: 2px solid #272727;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+    .Drawer-Container {
+        border-right: none;
+        padding-right: 0;
+        overflow: hidden;
+    }
+    .Open {
+        margin-top: 30px;
+    }
+}

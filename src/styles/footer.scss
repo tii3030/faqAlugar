@@ -1,0 +1,144 @@
+.Footer-Container {
+    background: #1E1E1E;
+    position: relative;
+    padding: 70px;
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    flex-direction: column;
+}
+
+.Footer-Container h5 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #EAF300;
+}
+
+.Footer-Container > div {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.Footer-Container a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.Col {
+    display: flex;
+    flex-basis: 80%;
+    gap: 150px;
+}
+
+.Cols {
+    flex-direction: column;
+    column-gap: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 170px;
+}
+
+.Logo {
+    height: 73px;
+    margin-top: 40px;
+}
+
+.Icons-Footer div {
+    margin-top: 10px;
+}
+
+.Icons-Footer svg {
+    margin-right: 10px;
+}
+
+.Credits span, .Credits a {
+    bottom: 0;
+    color: #b1b1b1;
+    font-size: 16px;
+    left: 50%;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    text-align: center;
+    margin-right: auto;
+}
+
+.Credits a {
+    text-decoration: underline;
+}
+
+@media (max-width: 1180px)
+{
+    .Cols {
+        flex-wrap: nowrap;
+    }
+    .Footer-Container > div {
+        justify-content: space-between;
+    }
+    .Col {
+        display: contents;
+    }
+}
+
+@media (max-width: 874px)
+{
+    .Cols {
+        flex-wrap: nowrap;
+        max-height: 1000px;
+    }
+    .Footer-Container > div {
+        justify-content: space-between;
+    }
+    .Col {
+        display: contents;
+    }
+    .Logo {
+        margin-top: 140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Footer-Container > div {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 630px)
+{
+    .Footer-Container {
+        align-items: center;
+    }
+    .Footer-Container h5 {
+        margin-bottom: 20px;
+    }
+    .Help-Search-Area h1 {
+        font-size: 30px;
+    }
+    .Left-Section h1 {
+        font-size: 30px;
+    }
+    .custom-search {
+        width: 410px;
+    }
+    .Left-Section div {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .Footer-Container > div {
+        flex-direction: column;
+    }
+    .Cols {
+        margin-bottom: 40px;
+    }
+    .Logo {
+        margin-top: 40px;
+    }
+}

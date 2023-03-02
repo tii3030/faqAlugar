@@ -1,0 +1,37 @@
+.Breadcrumbs {
+    margin-top: 95px;
+    background: #1E1E1E;
+    height: 38px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.Breadcrumbs div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Breadcrumbs a {
+    text-decoration: none;
+}
+
+.Breadcrumb-Not-Active {
+    color: #cccccc;
+}
+
+.Breadcrumb-Active {
+    color: #FFFFFF;
+}
+    
+.Breadcrumb-Arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,230 @@
+.Content {
+    background: #E6E5E5;
+    padding: 40px;
+    display: flex;
+}
+
+.Content audio {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+    border-radius: 42px;
+}
+
+.Content audio::-webkit-media-controls-panel
+{
+    background: #C2C0C0;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #56AEFF;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #272727;
+}
+
+audio::-webkit-media-controls-time-remaining-display
+ {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #272727;
+}
+
+.Title-Content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.Content section {
+    padding: 0 60px;
+}
+
+.Content .Search-Area {
+    width: 420px;
+    margin-left: auto;
+}
+
+.Content .Search-Input {
+    height: 74px;
+}
+
+.Content img {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.Content-Text {
+    padding: 60px 0;
+}
+
+.Content-Text ol, .Content-Text ul {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #272727;
+    margin-bottom: 22px;
+    margin-top: 22px;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.Content-Text ul > ul {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.Content-Text li {
+    padding-left: 10px;
+}
+
+.Content-Text p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #272727;
+}
+
+.Content hr {
+    border-top: 1px solid #8e8e8e !important;
+}
+
+.Content a {
+    color: #bd0101;
+    text-decoration: none;
+}
+
+.Rate-Text {
+    font-weight: 600;
+    font-size: 20px;
+    color: #272727;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.Container-RateIt {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Button-RateIt {
+    box-sizing: border-box;
+    width: 118px;
+    height: 60px;
+    border: 2px solid #1E1E1E;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
+}
+
+.Custom-Width {
+    width: 45% !important;
+    margin-right: 10px !important;
+}
+
+.Width-3 {
+    width: 30% !important;
+    margin-right: 10px !important;
+}
+
+.Wpp {
+    color: green !important;
+}
+
+.P-Tina {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.P-Tina strong {
+    display: contents;
+}
+
+.Tina {
+    width: 70px !important;
+    margin-right: 10px !important;
+}
+
+.P-Tina a {
+    display: contents !important;
+}
+
+@media (max-width: 992px)
+{
+    .Content {
+        display: block;
+    }
+    .Content section {
+        padding: 60px 0px !important;
+    }
+    .Content .Search-Area {
+        width: 100%;
+        margin-left: 0;
+    }
+    .Scroll-Top {
+        height: 70px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #272727;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding-right: 0;
+        margin-bottom: 0;
+        border-top: 2px solid #272727;
+        border-bottom: 2px solid #272727;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+        margin-top: 60px;
+        cursor: pointer;
+    }
+    .Custom-Width {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .Width-3 {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 730px)
+{
+    .Title-Content {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 428px)
+{
+    .Title-Content {
+        font-size: 30px !important;
+    }
+}

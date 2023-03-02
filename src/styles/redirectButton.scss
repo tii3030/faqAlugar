@@ -1,0 +1,42 @@
+.Redirect-Button {
+    box-sizing: border-box;
+    width: 300px;
+    height: 69px;
+    border: 2px solid #272727;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #272727;
+    cursor: pointer;
+}
+
+.Circle-Button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background: #1E1E1E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.Left-Section svg {
+    font-size: 35px;
+    color: #1E1E1E;
+    margin-left: 10px;
+}
+
+.Number-Indicator {
+    align-self: end;
+    line-height: 1.5;
+    margin-right: 5px;
+}

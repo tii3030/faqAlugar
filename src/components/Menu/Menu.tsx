@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
     return null;
   };
 
-  const links: LinkContent = topics.filter(function (line) {
+  const links: any = topics.filter(function (line) {
     return line.id === idTopic;
   })[0];
 

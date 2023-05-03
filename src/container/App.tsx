@@ -1,11 +1,14 @@
 import React from 'react';
 import Routes from '../routes/Routes';
+import { ModalProvider } from '../context/ModalContext';
 
 function App() {
   return (
-    <div className="App">
-      <Routes />
-    </div>
+    <ModalProvider>
+      <div className="App">
+        <Routes />
+      </div>
+    </ModalProvider>
   );
 }
 

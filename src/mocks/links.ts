@@ -814,7 +814,7 @@ const topics = [
     id: '0010',
     title: 'Financeiro',
     subTitle:
-      '<p>Todas as informações financeiras sobre o seu imóvel estão disponíveis em nossos canais de autoatendimento: área do cliente e aplicativo Alugar Imóveis de forma prática e segura. Se tiver dúvidas para acessá-los, confira aqui (incluir link para levar para as dúvidas sobre o assunto) o passo a passo. Caso queira falar com o nosso time  você pode salvar nosso contato e falar com a gente no WhatsApp clicando aqui. (incluir link para direcionar o cliente ao WhatsApp)</p>',
+      '<p>Todas as informações financeiras sobre o seu imóvel estão disponíveis em nossos canais de autoatendimento: área do cliente e aplicativo Alugar Imóveis de forma prática e segura. Se tiver dúvidas para acessá-los, confira aqui (incluir link para levar para as dúvidas sobre o assunto) o passo a passo. Caso queira falar com o nosso time  você pode salvar nosso contato e falar com a gente no WhatsApp <a href="https://api.whatsapp.com/send?phone=553834415000&text=Ol%C3%A1.">clicando aqui</a>.</p>',
     links: [
       {
         titleLink: 'Qual a data de repasse do aluguel?',
@@ -839,7 +839,7 @@ const topics = [
     title: 'Durante a locação',
     subTitle: `<p>Seu imóvel está com o contrato de locação ativo e sendo administrado pela Alugar Imóveis de forma prática e segura. Utilize nossos canais de atendimento para acompanhar todas as informações referentes ao seu imóvel online em tempo real. </p>
       <br/>
-      <p>Abaixo você encontra respostas para perguntas frequentes. Caso tenha alguma dúvida, sugestão ou problema, você pode falar com o nosso time por WhatsApp clicando aqui. (incluir link para direcionar o cliente ao WhatsApp)</p>`,
+      <p>Abaixo você encontra respostas para perguntas frequentes. Caso tenha alguma dúvida, sugestão ou problema, você pode falar com o nosso time por WhatsApp <a href="https://api.whatsapp.com/send?phone=553834415000&text=Ol%C3%A1.">clicando aqui</a>.</p>`,
     links: [
       {
         titleLink: 'Como e quando meu contrato de locação é reajustado?',

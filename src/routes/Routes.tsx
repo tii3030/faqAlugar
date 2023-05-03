@@ -9,14 +9,14 @@ import Error from '../components/404/404';
 import Wrapper from '../wrapper/wrapper';
 import Home from '../pages/Home/Home';
 import Topics from '../pages/Topics/Topics';
-import Faq03 from '../pages/Content/Content';
+// import Faq03 from '../pages/Content/Content';
 
 const Routes: React.FC = () => (
   <Router>
     <Routers>
-      <Route path="/" element={<Navigate to="/Home" />} />
+      <Route path="/" element={<Navigate to="/home" />} />
       <Route
-        path="/Home"
+        path="/home"
         element={
           <Wrapper>
             <Home />
@@ -24,21 +24,21 @@ const Routes: React.FC = () => (
         }
       />
       <Route
-        path="/Home/topics/:idTopic"
+        path="/home/topics/:idTopic"
         element={
           <Wrapper>
             <Topics />
           </Wrapper>
         }
       />
-      <Route
-        path="/Home/topics/:idTopic/content/:idContent"
+      {/* <Route
+        path="/home/topics/:idTopic/content/:idContent"
         element={
           <Wrapper>
             <Faq03 />
           </Wrapper>
         }
-      />
+      /> */}
       <Route
         path="/error"
         element={

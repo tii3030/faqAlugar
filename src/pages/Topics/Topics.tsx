@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 import { useNavigate, useParams } from 'react-router-dom';
-import { FiChevronsDown, FiSearch } from 'react-icons/fi';
+import { FiChevronDown, FiChevronRight, FiSearch } from 'react-icons/fi';
 import { topics } from '../../mocks/links';
 import { Content } from '../../types/links';
-import { FiChevronDown, FiChevronRight } from 'react-icons/fi';
+import { useModal } from '../../context/ModalContext';
 
 const Topics: React.FC = () => {
+  const { isSelected } = useModal();
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -16,13 +17,18 @@ const Topics: React.FC = () => {
 
   const { idTopic } = useParams();
   const navigate = useNavigate();
+  useEffect(() => {
+    if (!isSelected) {
+      navigate('/home');
+    }
+  }, []);
   const links: any = topics.filter(function (line) {
     return line.id === idTopic;
   })[0];
   const [searchInput, setSearchInput] = useState('');
   const [onInputClick, setOnInputClick] = useState(false);
   const [results, setResult] = useState<Content[]>();
-  const currentPath = window.location.pathname;
+  // const currentPath = window.location.pathname;
 
   const handleChange = (e: any | (() => void)) => {
     e.preventDefault();
@@ -42,7 +48,19 @@ const Topics: React.FC = () => {
     }
   }, [links]);
 
-  const [isSubLinks, setIsSubLinks] = useState<string | undefined>('');
+  const [isSubLinks, setIsSubLinks] = useState<Array<string>>([]);
+  const [aux, setAux] = useState(false);
+
+  const pushItems = (item: string) => {
+    const arrayTemp = isSubLinks;
+    if (arrayTemp.includes(item)) {
+      arrayTemp.splice(arrayTemp.indexOf(item), 1);
+    } else {
+      arrayTemp.push(item);
+    }
+    setIsSubLinks(arrayTemp);
+    setAux(!aux);
+  };
 
   return (
     <div className="Topics">
@@ -94,7 +112,8 @@ const Topics: React.FC = () => {
             !line.subLinks ? (
               <div
                 key={uuid()}
-                onClick={() => navigate(`${currentPath}/content/${line.route}`)}
+                // onClick={() => navigate(`${currentPath}/content/${line.route}`)}
+                onClick={() => null}
                 onKeyDown={() => null}
                 aria-hidden="true"
               >
@@ -104,21 +123,22 @@ const Topics: React.FC = () => {
             ) : (
               <div
                 key={uuid()}
-                onClick={() => setIsSubLinks(line.titleLink)}
+                onClick={() => pushItems(line.titleLink)}
                 onKeyDown={() => null}
                 aria-hidden="true"
               >
-                <div className='Line-Collapsible'>
+                <div className="Line-Collapsible">
                   <span key={uuid()}>{line.titleLink}</span>
-                  {isSubLinks === line.titleLink 
-                    ? <FiChevronDown size={23} />
-                    : <FiChevronRight size={23} />
-                  }
+                  {isSubLinks.includes(line.titleLink) ? (
+                    <FiChevronDown size={23} />
+                  ) : (
+                    <FiChevronRight size={23} />
+                  )}
                 </div>
                 <hr />
                 <div
                   className={
-                    isSubLinks === line.titleLink
+                    isSubLinks.includes(line.titleLink)
                       ? 'Sub-Links Open-Sub'
                       : 'Close-Sub'
                   }
@@ -126,11 +146,13 @@ const Topics: React.FC = () => {
                   {line.subLinks?.map((subLine: any) => (
                     <div
                       key={uuid()}
-                      onClick={() =>
-                        navigate(`${currentPath}/content/${subLine.route}`)
-                      }
+                      // onClick={() =>
+                      //   navigate(`${currentPath}/content/${subLine.route}`)
+                      // }
+                      onClick={() => null}
                       onKeyDown={() => null}
                       aria-hidden="true"
+                      className="Cursor-Pointer"
                     >
                       <span key={uuid()}>{subLine.titleLink}</span>
                       <hr />

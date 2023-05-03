@@ -5,17 +5,22 @@ import Footer from '../layout/Footer/Footer';
 
 type WrapperType = {
   children: React.ReactNode;
+  isBreadcrumbs?: boolean;
 };
 
-const Wrapper: React.FC<WrapperType> = ({ children }) => {
+const Wrapper: React.FC<WrapperType> = ({ children, isBreadcrumbs }) => {
   return (
     <>
       <Header />
-      <Breadcrumbs />
+      {isBreadcrumbs && <Breadcrumbs />}
       <div>{children}</div>
       <Footer />
     </>
   );
+};
+
+Wrapper.defaultProps = {
+  isBreadcrumbs: true,
 };
 
 export default Wrapper;

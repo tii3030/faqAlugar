@@ -87,7 +87,7 @@ const Content: React.FC = () => {
 
   const onSubmit = (question: string, id: string) => {
     setSearchInput(question);
-    const topic: LinkContent = topics.filter(function (line) {
+    const topic: any = topics.filter(function (line) {
       return line.links.filter(function (op) {
         return op.route === id;
       })[0];

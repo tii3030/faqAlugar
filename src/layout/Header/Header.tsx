@@ -5,14 +5,14 @@ const Header: React.FC = () => {
   return (
     <div className="Header-Container">
       <div>
-        <a href="https://www.rotina.com.br/">
+        <a href="https://www.alugarimoveis.net/">
           <img src={Logo} alt="Rotina Imobiliária" className="Logo-Header" />
         </a>
       </div>
       <div>
         <a
           className="Button-Header"
-          href="https://www.portalunsoft.com.br/area-do-cliente/rotina"
+          href="https://www.portalunsoft.com.br/area-do-cliente/alugar"
         >
           ÁREA DO CLIENTE
         </a>

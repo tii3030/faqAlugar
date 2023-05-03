@@ -145,9 +145,9 @@
 .Open-Sub {
     height: 100%;
     overflow: hidden;
-    animation-duration: 0.2s;
-    animation-name: downs;
-    transition: height 0.2s;
+    // animation-duration: 0.2s;
+    // animation-name: downs;
+    // transition: height 0.2s;
 }
 
 .Close-Sub {
@@ -158,23 +158,28 @@
 .Line-Collapsible {
     justify-content: space-between;
     display: flex;
+    cursor: pointer;
 }
 
-@keyframes downs {
-    from {
-        margin-left: -80%;
-    }
-    to {
-        -left: 20px;
-    }
+.Cursor-Pointer {
+    cursor: pointer;
 }
 
-@media (max-width: 874px)
-{
-    .Search-Area {
-        width: 500px;
-    }
-}
+// @keyframes downs {
+//     from {
+//         margin-left: -80%;
+//     }
+//     to {
+//         -left: 20px;
+//     }
+// }
+
+// @media (max-width: 874px)
+// {
+//     .Search-Area {
+//         width: 500px;
+//     }
+// }
 
 @media (max-width: 630px)
 {

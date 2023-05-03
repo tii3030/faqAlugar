@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiYoutube, FiInstagram, FiFacebook } from 'react-icons/fi';
+import { FiInstagram, FiFacebook } from 'react-icons/fi';
 import Logo from '../../assets/img/logo.png';
 
 const Footer: React.FC = () => {
@@ -42,21 +42,14 @@ const Footer: React.FC = () => {
           <p>CRECI PJ 132</p>
           <div>
             <a
-              href="https://www.youtube.com/user/rotinaimobiliaria/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FiYoutube color="#EAF300" size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com/rotinaimobiliaria/"
+              href="https://www.instagram.com/alugarbr/"
               target="_blank"
               rel="noreferrer"
             >
               <FiInstagram color="#EAF300" size={30} />
             </a>
             <a
-              href="https://www.facebook.com/rotinaimobiliaria/"
+              href="https://www.facebook.com/alugarbr/"
               target="_blank"
               rel="noreferrer"
             >
@@ -69,22 +62,6 @@ const Footer: React.FC = () => {
         <a href="https://www.rotina.com.br/">
           <img src={Logo} alt="Rotina Imobiliária" className="Logo" />
         </a>
-      </div>
-      <div className="Credits">
-        <span>
-          © Todos os direitos reservados - Desenvolvido por{' '}
-          <a
-            href="https://github.com/tii3030/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            TIAGO PEREIRA{' '}
-          </a>
-          e desenhado pela{' '}
-          <a href="https://www.rotina.com.br/" target="_blank" rel="noreferrer">
-            ALUGAR IMÓVEIS.
-          </a>
-        </span>
       </div>
     </div>
   );

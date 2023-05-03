@@ -12,13 +12,13 @@ const Breadcrumbs: React.FC = () => {
 
   useEffect(() => {
     if (paths.length === 4) {
-      const topicsPath: LinkContent = topics.filter(function (line) {
+      const topicsPath: any = topics.filter(function (line) {
         return line.id === idTopic || '';
       })[0];
       pushRoutes(['Home', topicsPath?.title]);
     }
     if (paths.length === 6) {
-      const topicsPath: LinkContent = topics.filter(function (line) {
+      const topicsPath: any = topics.filter(function (line) {
         return line.id === idTopic || '';
       })[0];
       const contentPath: DataContent = content.filter(function (line) {
